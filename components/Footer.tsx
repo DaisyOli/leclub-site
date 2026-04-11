@@ -7,6 +7,17 @@ export default function Footer() {
       <Container>
         <FooterDesktop />
         <FooterMobile />
+
+        <div className="mt-8 border-t border-white/10 pt-6 text-center text-sm opacity-80">
+          <a
+            href="https://www.linkedin.com/in/daisy-oliani"
+            target="_blank"
+            rel="noreferrer"
+            className="transition-opacity hover:opacity-70"
+          >
+            Site desenvolvido por Daisy Oliani
+          </a>
+        </div>
       </Container>
     </footer>
   );
@@ -28,8 +39,12 @@ function FooterDesktop() {
         <a href="#local" className="opacity-90 transition-opacity hover:opacity-70">
           Local
         </a>
-        <a href="https://vendas.online.sistemapacto.com.br/loja?un=1&k=ca89d02626bca25861157f7d214c12fc" className="opacity-90 transition-opacity hover:opacity-70" target="_blank" rel="noreferrer">
-        
+        <a
+          href="https://vendas.online.sistemapacto.com.br/loja?un=1&k=ca89d02626bca25861157f7d214c12fc"
+          className="opacity-90 transition-opacity hover:opacity-70"
+          target="_blank"
+          rel="noreferrer"
+        >
           Planos
         </a>
       </nav>
@@ -41,18 +56,18 @@ function FooterDesktop() {
           Contato
         </a>
         <a
-  href="mailto:recursoshumanos@leclubfw.com"
-  className="opacity-90 transition-opacity hover:opacity-70"
->
-  Faça parte da equipe
-</a>
+          href="mailto:recursoshumanos@leclubfw.com"
+          className="opacity-90 transition-opacity hover:opacity-70"
+        >
+          Faça parte da equipe
+        </a>
       </nav>
 
       <div className="flex flex-col gap-3">
         <span className="text-[15px] opacity-90">Siga</span>
 
         <a
-          href="https://instagram.com"
+          href="https://instagram.com/leclubfw"
           target="_blank"
           rel="noreferrer"
           aria-label="Instagram da Le Club"
@@ -93,7 +108,12 @@ function FooterMobile() {
           <a href="#local" className="opacity-90 transition-opacity hover:opacity-70">
             Local
           </a>
-          <a href="https://vendas.online.sistemapacto.com.br/loja?un=1&k=ca89d02626bca25861157f7d214c12fc" className="opacity-90 transition-opacity hover:opacity-70" target="_blank" rel="noreferrer">
+          <a
+            href="https://vendas.online.sistemapacto.com.br/loja?un=1&k=ca89d02626bca25861157f7d214c12fc"
+            className="opacity-90 transition-opacity hover:opacity-70"
+            target="_blank"
+            rel="noreferrer"
+          >
             Planos
           </a>
         </nav>
@@ -105,18 +125,18 @@ function FooterMobile() {
             Contato
           </a>
           <a
-  href="mailto:recursoshumanos@leclubfw.com"
-  className="opacity-90 transition-opacity hover:opacity-70"
->
-  Faça parte da equipe
-</a>
+            href="mailto:recursoshumanos@leclubfw.com"
+            className="opacity-90 transition-opacity hover:opacity-70"
+          >
+            Faça parte da equipe
+          </a>
         </nav>
 
         <div className="flex flex-col gap-3">
           <span className="text-sm opacity-90">Siga</span>
 
           <a
-            href="https://instagram.com"
+            href="https://instagram.com/leclubfw"
             target="_blank"
             rel="noreferrer"
             aria-label="Instagram da Le Club"
