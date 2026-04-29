@@ -29,7 +29,7 @@ function NavbarMobile({ variant = "light" }: NavbarProps) {
     : "text-[var(--nav-text)]/35";
 
   const ctaClass = [
-    "inline-flex h-[39px] min-w-[86px] items-center justify-center rounded-full border",
+    "inline-flex h-[39px] min-w-[81px] items-center justify-center rounded-full border",
     "border-[var(--dark-green)] bg-[var(--dark-green)]",
     "px-3.5 py-1.5 text-[10.5px] font-medium tracking-[0.02em] whitespace-nowrap",
     "text-[var(--white-typo)]",
@@ -46,7 +46,7 @@ function NavbarMobile({ variant = "light" }: NavbarProps) {
               aria-label="Ir para o início"
               className="justify-self-start shrink-0 -translate-x-4 -translate-y-[0.2px]"
             >
-              <span className="inline-block origin-left scale-[0.89]">
+              <span className="inline-block origin-left scale-[0.92]">
                 {isDark ? <LogoLight /> : <LogoDark />}
               </span>
             </Link>
