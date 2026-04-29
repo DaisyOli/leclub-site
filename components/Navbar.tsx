@@ -30,10 +30,10 @@ function NavbarMobile({ variant = "light" }: NavbarProps) {
 
   const ctaClass = [
     "inline-flex h-[39px] min-w-[86px] items-center justify-center rounded-full border",
-    "px-3.5 py-1.5 text-[10.5px] font-medium tracking-[0.02em] whitespace-nowrap transition-all duration-300",
-    isDark
-      ? "border-[var(--copper)] bg-[var(--copper)] text-[var(--white-typo)] hover:opacity-90"
-      : "border-[var(--nav-text)] bg-[var(--light-sand)] text-[var(--nav-text)] hover:bg-[var(--dark-green)] hover:text-[var(--white-typo)]",
+    "border-[var(--dark-green)] bg-[var(--dark-green)]",
+    "px-3.5 py-1.5 text-[10.5px] font-medium tracking-[0.02em] whitespace-nowrap",
+    "text-[var(--white-typo)]",
+    "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--dark-green)]",
   ].join(" ");
 
   return (
@@ -44,16 +44,16 @@ function NavbarMobile({ variant = "light" }: NavbarProps) {
             <Link
               href="/"
               aria-label="Ir para o início"
-              className="justify-self-start shrink-0 -translate-x-2 -translate-y-[0.5px]"
+              className="justify-self-start shrink-0 -translate-x-2 -translate-y-[0.2px]"
             >
-              <span className="inline-block origin-left scale-[0.89]">
+              <span className="inline-block origin-left scale-[0.88]">
                 {isDark ? <LogoLight /> : <LogoDark />}
               </span>
             </Link>
 
             <nav className="justify-self-center flex items-center gap-2 pt-1">
               <Link href="#sobre" className={subnavClass}>
-                Sobre
+                Academia
               </Link>
 
               <span className={dotClass}>·</span>
@@ -64,20 +64,19 @@ function NavbarMobile({ variant = "light" }: NavbarProps) {
             </nav>
 
             <Link
-  href="https://vendas.online.sistemapacto.com.br/planos?un=1&k=ca89d02626bca25861157f7d214c12fc"
-  target="_blank"
-  rel="noopener noreferrer"
-  className={`${ctaClass} justify-self-end translate-x-1 -translate-y-1`}
->
-  Planos
-</Link>
+              href="https://vendas.online.sistemapacto.com.br/planos?un=1&k=ca89d02626bca25861157f7d214c12fc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${ctaClass} justify-self-end translate-x-1 -translate-y-1`}
+            >
+              Planos
+            </Link>
           </div>
         </div>
       </Container>
     </header>
   );
 }
-
 function NavbarDesktop({ variant = "light" }: NavbarProps) {
   const isDark = variant === "dark";
 
