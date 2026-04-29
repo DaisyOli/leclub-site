@@ -48,7 +48,7 @@ function HeroHeadline() {
     <div className="pointer-events-none absolute inset-0 z-10">
   {/* Mobile */}
   <div className="absolute left-1/2 top-[26%] w-[220px] -translate-x-1/2 md:hidden">
-    <h1 className="text-center font-[family-name:var(--font-cormorant)] text-[27px] leading-[1.08] tracking-[0.01em] text-[rgba(13,43,37,0.68)]">
+    <h1 className="text-center font-[family-name:var(--font-cormorant)] text-[25px] leading-[1.08] tracking-[0.01em] text-[rgba(13,43,37,0.68)]">
       Corpo,
       <br />
       movimento e

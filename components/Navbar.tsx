@@ -46,7 +46,7 @@ function NavbarMobile({ variant = "light" }: NavbarProps) {
               aria-label="Ir para o início"
               className="justify-self-start shrink-0 -translate-x-2 -translate-y-[0.2px]"
             >
-              <span className="inline-block origin-left scale-[0.88]">
+              <span className="inline-block origin-left scale-[0.89]">
                 {isDark ? <LogoLight /> : <LogoDark />}
               </span>
             </Link>
@@ -67,7 +67,7 @@ function NavbarMobile({ variant = "light" }: NavbarProps) {
               href="https://vendas.online.sistemapacto.com.br/planos?un=1&k=ca89d02626bca25861157f7d214c12fc"
               target="_blank"
               rel="noopener noreferrer"
-              className={`${ctaClass} justify-self-end translate-x-1 -translate-y-1`}
+              className={`${ctaClass} justify-self-end translate-x-4 -translate-y-1`}
             >
               Planos
             </Link>
