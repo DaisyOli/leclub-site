@@ -44,7 +44,7 @@ function NavbarMobile({ variant = "light" }: NavbarProps) {
             <Link
               href="/"
               aria-label="Ir para o início"
-              className="justify-self-start shrink-0 -translate-x-2 -translate-y-[0.2px]"
+              className="justify-self-start shrink-0 -translate-x-4 -translate-y-[0.2px]"
             >
               <span className="inline-block origin-left scale-[0.89]">
                 {isDark ? <LogoLight /> : <LogoDark />}
