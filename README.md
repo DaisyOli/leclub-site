@@ -39,5 +39,5 @@ The website is deployed and publicly available.
 
 ## Links
 
-- [Live website](leclubfw.com)
+- [Live website](https://www.leclubfw.com/)
 - [Source code](https://github.com/DaisyOli/leclub-site)
