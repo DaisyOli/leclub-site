@@ -7,6 +7,8 @@
   --copper: #BA753D;
   --light-sand: #E3DED4; 
   --dark-sand: #CDC7BC;
+  --copper-cta: #A15F2E;
+  --copper-deep: #8F5A2D;
 
   --text-dark: #0D2B25;
   --text-light: #E4E2DB;
@@ -16,4 +18,8 @@
 
 body {
   margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }

@@ -2,7 +2,6 @@ import Image from "next/image";
 import Container from "./Container";
 import MediaFrame from "./MediaFrame";
 import SectionIntro from "./SectionIntro";
-import Navbar from "./Navbar";
 
 export default function About() {
   return (

@@ -64,9 +64,7 @@ function NavbarMobile({ variant = "light" }: NavbarProps) {
             </nav>
 
             <Link
-              href="https://vendas.online.sistemapacto.com.br/planos?un=1&k=ca89d02626bca25861157f7d214c12fc"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#planos"
               className={`${ctaClass} justify-self-end translate-x-4 -translate-y-1`}
             >
               Planos
@@ -120,9 +118,7 @@ function NavbarDesktop({ variant = "light" }: NavbarProps) {
           </nav>
 
           <Link
-            href="https://vendas.online.sistemapacto.com.br/planos?un=1&k=ca89d02626bca25861157f7d214c12fc"
-             target="_blank"
-            rel="noopener noreferrer"
+            href="#planos"
             className={[
               "inline-flex shrink-0 items-center justify-center rounded-full border px-6 py-2.5 text-[13px] font-medium tracking-[0.02em] -translate-y-[3px] mr-8 transition-all duration-300",
               isDark
