@@ -1,6 +1,6 @@
 <p align="right"><a href="README.md">English</a> · <strong>Français</strong> · <a href="README.pt-BR.md">Português</a></p>
 
-# LeCLUB Fitness & Wellness
+### [Le Club](https://github.com/DaisyOli/leclub-site)
 
 Site vitrine pour LeCLUB Fitness & Wellness, un studio de fitness et de bien-être haut de gamme situé à Alto de Pinheiros, São Paulo. Conçu pour présenter la marque et transformer les visiteurs en prospects pour la prévente de l'abonnement annuel du studio, via WhatsApp.
 
