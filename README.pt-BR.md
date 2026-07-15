@@ -1,6 +1,6 @@
 <p align="right"><a href="README.md">English</a> · <a href="README.fr.md">Français</a> · <strong>Português</strong></p>
 
-# LeCLUB Fitness & Wellness
+### [Le Club](https://github.com/DaisyOli/leclub-site)
 
 Site institucional da LeCLUB Fitness & Wellness, um studio boutique de fitness e wellness no Alto de Pinheiros, São Paulo. Construído para apresentar a marca e converter visitantes em leads para a pré-venda do plano anual do studio, via WhatsApp.
 
