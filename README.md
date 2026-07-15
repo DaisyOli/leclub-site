@@ -1,6 +1,6 @@
 <p align="right"><strong>English</strong> · <a href="README.fr.md">Français</a> · <a href="README.pt-BR.md">Português</a></p>
 
-# Le Club
+### [Le Club](https://github.com/DaisyOli/leclub-site)
 
 A responsive website for a boutique fitness and wellness studio in São Paulo, Brazil, built with Next.js, TypeScript and Tailwind CSS.
 
