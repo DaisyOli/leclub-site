@@ -40,7 +40,7 @@ function FooterDesktop() {
           Local
         </a>
         <a
-          href="#planos"
+          href="https://vendas.online.sistemapacto.com.br/loja?un=1&k=ca89d02626bca25861157f7d214c12fc"
           className="opacity-90 transition-opacity hover:opacity-70"
           target="_blank"
           rel="noreferrer"
@@ -108,8 +108,11 @@ function FooterMobile() {
           <a href="#local" className="opacity-90 transition-opacity hover:opacity-70">
             Local
           </a>
-          <a href="#planos"
+          <a
+            href="https://vendas.online.sistemapacto.com.br/loja?un=1&k=ca89d02626bca25861157f7d214c12fc"
             className="opacity-90 transition-opacity hover:opacity-70"
+            target="_blank"
+            rel="noreferrer"
           >
             Planos
           </a>
