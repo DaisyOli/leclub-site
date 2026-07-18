@@ -1,12 +1,14 @@
 <p align="right"><a href="README.md">English</a> · <strong>Français</strong> · <a href="README.pt-BR.md">Português</a></p>
 
-### [Le Club](https://github.com/DaisyOli/leclub-site)
+# LeCLUB Fitness & Wellness
 
-Site vitrine pour LeCLUB Fitness & Wellness, un studio de fitness et de bien-être haut de gamme situé à Alto de Pinheiros, São Paulo. Conçu pour présenter la marque et transformer les visiteurs en prospects pour la prévente de l'abonnement annuel du studio, via WhatsApp.
+Site vitrine pour LeCLUB Fitness & Wellness, un studio de fitness et de bien-être haut de gamme situé à Alto de Pinheiros, São Paulo. Conçu pour présenter la marque et amener les visiteurs qualifiés jusqu'à une inscription, via WhatsApp et la plateforme de vente du studio.
+
+**Site en ligne** : [leclubfw.com](https://www.leclubfw.com/)
 
 ## Aperçu
 
-LeCLUB est un espace d'entraînement à capacité limitée, associant coaching de force et services cliniques et de récupération (consultations médicales, analyse de composition corporelle, bain glacé, thérapie par compression). Le site a un rôle précis : communiquer ce positionnement clairement et amener les visiteurs qualifiés jusqu'à une conversation WhatsApp.
+LeCLUB est un espace d'entraînement à capacité limitée, associant coaching de force et services cliniques et de récupération (consultations médicales, analyse de composition corporelle, bain glacé, thérapie par compression). Le site a un rôle précis : communiquer ce positionnement clairement et amener les visiteurs qualifiés jusqu'à une conversation.
 
 ## Démarche de conception
 
@@ -17,8 +19,8 @@ L'interface a été entièrement conçue et prototypée sur Figma avant l'écrit
 Le positionnement de LeCLUB — un studio restreint et sélectionné plutôt qu'une salle de sport à fort volume — a orienté des décisions produit concrètes, pas seulement le style visuel :
 
 - **Langage visuel** : un mariage éditorial entre titres en serif (Cormorant Garamond) et un corps de texte en sans-serif (Manrope), sur une palette de tons naturels (`#0D2B25` vert foncé, `#BA753D` cuivre, neutres sable) plutôt que l'esthétique énergique habituelle des salles de sport.
-- **Structure du contenu** : les sections s'organisent autour du soin, de la technique et de la continuité (« Sobre », « Local », « Planos ») plutôt qu'autour de promotions ou d'un planning de cours.
-- **Structure de l'offre** : un abonnement annuel unique et détaillé, plutôt qu'une grille tarifaire à plusieurs niveaux, cohérent avec un modèle de service à capacité limitée.
+- **Structure du contenu** : les sections s'organisent autour du soin, de la technique et de la continuité (« Sobre », « Local ») plutôt qu'autour de promotions ou d'un planning de cours.
+- **Parcours de conversion** : les tarifs et l'inscription se font sur la plateforme de vente propre au studio plutôt que dans une page de paiement intégrée. Les CTA du site (navigation, pied de page, bouton WhatsApp flottant) redirigent vers cette plateforme ou ouvrent une conversation WhatsApp, gardant l'expérience sur site centrée sur la marque et le lieu.
 
 | Variable | Valeur | Usage |
 |---|---|---|
@@ -34,14 +36,14 @@ Le positionnement de LeCLUB — un studio restreint et sélectionné plutôt qu'
 - Tailwind CSS 4
 - `next/font` (Cormorant Garamond, Manrope) et `next/image` pour l'optimisation des polices et des images
 - [lucide-react](https://lucide.dev) pour l'iconographie
+- Déployé sur Vercel
 
 ## Fonctionnalités
 
 - Mise en page mobile-first avec des variantes de composants dédiées mobile/desktop pour chaque section (`HeroMobile`/`HeroDesktop`, etc.), permettant un contrôle précis à chaque point de rupture plutôt que de s'appuyer uniquement sur des classes responsives
 - Barre de navigation avec variantes claire/sombre selon le fond de la section affichée
-- Navigation par ancres (`#sobre`, `#local`, `#planos`) avec défilement fluide
+- Navigation par ancres (`#sobre`, `#local`) avec défilement fluide
 - Bouton WhatsApp flottant sensible au scroll, isolé en Client Component afin que le reste de la page reste rendu côté serveur
-- Séparation données/présentation pour la carte tarifaire (`plans.data.ts` alimente `PlanCard`, `PlanBenefit`, `PlanPriceBox`, `PlanCTA`), permettant de modifier l'offre sans toucher à la mise en page
 - SEO de base via la Metadata API de Next.js
 
 ## Structure du projet
@@ -53,7 +55,6 @@ app/
   globals.css         # Design tokens (variables CSS)
 components/
   Hero.tsx, Sobre.tsx, Local.tsx
-  plans/               # Carte tarifaire et ses données
   Navbar.tsx, Footer.tsx, FloatingWhatsAppDesktop.tsx
   Container.tsx, MediaFrame.tsx, SectionIntro.tsx  # Primitives de mise en page partagées
 ```
