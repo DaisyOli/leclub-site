@@ -18,7 +18,7 @@ export default function About() {
 
 function AboutMobile() {
   return (
-    <div id="sobre"className="min-h-[100svh] bg-[var(--dark-green)] py-24 md:hidden">
+    <div className="min-h-[100svh] bg-[var(--dark-green)] py-24 md:hidden">
       <Container>
         <div className="flex flex-col gap-8">
           <SectionIntro
@@ -68,7 +68,7 @@ function AboutMobile() {
 
 function AboutDesktop() {
   return (
-    <div id="sobre" className="relative hidden h-[100svh] bg-[var(--dark-green)] md:block">
+    <div className="relative hidden h-[100svh] bg-[var(--dark-green)] md:block">
       <Container>
         {/* <Navbar variant="dark" /> */}
         <div className="mx-auto flex h-full w-full max-w-[980px] items-center">

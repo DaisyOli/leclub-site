@@ -22,7 +22,7 @@ function HeroMobile() {
         src="/hero-mobile4.png"
         alt="Le Club Fitness & Wellness"
         fill
-        priority
+        sizes="100vw"
         className="object-cover object-center"
       />
     </div>
@@ -36,7 +36,7 @@ function HeroDesktop() {
         src="/hero-desktop.png"
         alt="Le Club Fitness & Wellness"
         fill
-        priority
+        sizes="100vw"
         className="object-cover object-center"
       />
     </div>

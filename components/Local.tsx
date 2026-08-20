@@ -18,7 +18,7 @@ export default function Local() {
 
 function LocalMobile() {
   return (
-    <div id="local" className="min-h-[100svh] bg-[var(--dark-sand)] py-24 md:hidden">
+    <div className="min-h-[100svh] bg-[var(--dark-sand)] py-24 md:hidden">
       <Container>
         <div className="flex flex-col gap-8">
           <SectionIntro
@@ -94,7 +94,7 @@ function LocalMobile() {
 
 function LocalDesktop() {
   return (
-    <div id="local" className="relative hidden h-[100svh] bg-[var(--dark-sand)] md:block">
+    <div className="relative hidden h-[100svh] bg-[var(--dark-sand)] md:block">
       <Container>
         {/* <Navbar variant="light" /> */}
         <div className="mx-auto flex h-full w-full max-w-[840px] items-center">

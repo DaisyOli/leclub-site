@@ -22,11 +22,10 @@ export default function FloatingWhatsAppDesktop() {
   const [mode, setMode] = useState<WhatsAppMode>("hidden");
 
   useEffect(() => {
-    const hero = document.getElementById("hero") 
-    const sobre = document.getElementById("sobre") 
-    const local = document.getElementById("local") 
+    const sobre = document.getElementById("sobre");
+    const local = document.getElementById("local");
 
-    if (!hero || !sobre || !local) return;
+    if (!sobre || !local) return;
 
     const updateMode = () => {
       const scrollY = window.scrollY;
@@ -45,7 +44,7 @@ export default function FloatingWhatsAppDesktop() {
         return;
       }
 
-      setMode("icon");
+      setMode("full");
     };
 
     updateMode();
@@ -73,7 +72,9 @@ export default function FloatingWhatsAppDesktop() {
         isVisible
           ? "pointer-events-auto translate-y-0 opacity-100"
           : "pointer-events-none translate-y-3 opacity-0",
-        isExpanded ? "h-12 gap-2 px-5" : "h-12 w-12 justify-center",
+        isExpanded
+          ? "h-12 w-12 justify-center md:w-auto md:justify-start md:gap-2 md:px-5"
+          : "h-12 w-12 justify-center",
       ].join(" ")}
     >
       <WhatsAppIcon className="h-5 w-5 shrink-0" />
@@ -81,7 +82,9 @@ export default function FloatingWhatsAppDesktop() {
       <span
         className={[
           "whitespace-nowrap text-sm font-medium transition-all duration-300",
-          isExpanded ? "max-w-[160px] opacity-100" : "max-w-0 opacity-0",
+          isExpanded
+            ? "max-w-0 opacity-0 md:max-w-[160px] md:opacity-100"
+            : "max-w-0 opacity-0",
         ].join(" ")}
       >
         Fale no WhatsApp
