@@ -8,7 +8,7 @@ type PlanCTAProps = {
 export default function PlanCTA({ label, href }: PlanCTAProps) {
   return (
     <a
-      href="https://vendas.online.sistemapacto.com.br/planos?un=1&k=ca89d02626bca25861157f7d214c12fc"
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}

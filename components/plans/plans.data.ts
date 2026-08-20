@@ -60,7 +60,7 @@ export const annualPlan = {
   enrollmentFee: "+ taxa de matrícula de R$ 450",
   condition: "Condição especial de inauguração",
   ctaLabel: "Participar da pré-venda",
-  ctaHref: "https://wa.me/5500000000000",
+  ctaHref: "/inscricao",
   footerText:
     "Capacidade limitada para preservar a qualidade do acompanhamento e da experiência",
 };
