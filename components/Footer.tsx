@@ -40,7 +40,7 @@ function FooterDesktop() {
           Local
         </a>
         <a
-          href="/planos"
+          href="/loja"
           className="opacity-90 transition-opacity hover:opacity-70"
           target="_blank"
           rel="noreferrer"
@@ -109,7 +109,7 @@ function FooterMobile() {
             Local
           </a>
           <a
-            href="/planos"
+            href="/loja"
             className="opacity-90 transition-opacity hover:opacity-70"
             target="_blank"
             rel="noreferrer"

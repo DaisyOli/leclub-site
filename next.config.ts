@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
-        source: "/planos",
+        source: "/loja",
         destination: `https://vendas.online.sistemapacto.com.br/loja?${PACTO_UNIT}`,
         permanent: false,
       },
