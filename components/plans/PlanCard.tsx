@@ -28,6 +28,7 @@ export default function PlanCard() {
           <PlanPriceBox
             referencePrice={annualPlan.referencePrice}
             presalePrice={annualPlan.presalePrice}
+            enrollmentFee={annualPlan.enrollmentFee}
             condition={annualPlan.condition}
           />
 

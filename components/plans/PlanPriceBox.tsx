@@ -3,12 +3,14 @@ import { LeafIcon, TagIcon } from "../icons/PlanIcons";
 type PlanPriceBoxProps = {
   referencePrice: string;
   presalePrice: string;
+  enrollmentFee: string;
   condition: string;
 };
 
 export default function PlanPriceBox({
   referencePrice,
   presalePrice,
+  enrollmentFee,
   condition,
 }: PlanPriceBoxProps) {
   return (
@@ -35,6 +37,10 @@ export default function PlanPriceBox({
 
           <p className="mt-2 text-[26px] font-semibold leading-none tracking-[0.02em] text-[var(--copper)] md:text-[24px] xl:text-[26px]">
             {presalePrice}
+          </p>
+
+          <p className="mt-2 text-[11px] leading-[1.3] text-[var(--text-dark)]/80">
+            {enrollmentFee}
           </p>
         </div>
 

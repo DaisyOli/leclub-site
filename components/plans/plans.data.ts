@@ -57,6 +57,7 @@ export const annualPlan = {
     "Acesso à estrutura LeCLUB com acompanhamento técnico, avaliações periódicas, recursos de recuperação e benefícios exclusivos.",
   referencePrice: "R$ 1.100",
   presalePrice: "R$ 973",
+  enrollmentFee: "+ taxa de matrícula de R$ 450",
   condition: "Condição especial de inauguração",
   ctaLabel: "Participar da pré-venda",
   ctaHref: "https://wa.me/5500000000000",
