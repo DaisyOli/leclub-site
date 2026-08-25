@@ -11,11 +11,11 @@ export default function PlansSection() {
     <section
       id="planos"
       aria-labelledby="plans-heading"
-      className="w-full bg-[var(--dark-green)] py-20 lg:min-h-screen lg:py-0"
+      className="w-full bg-[var(--dark-green)] py-20 lg:min-h-screen"
       
     >
       <Container>
-        <div className="mx-auto grid gap-12 lg:min-h-screen lg:w-full lg:max-w-[980px] lg:grid-cols-[280px_620px] lg:items-center lg:justify-center lg:gap-10 xl:max-w-[1060px] xl:grid-cols-[300px_660px]">
+        <div className="mx-auto grid gap-12 lg:min-h-[calc(100vh-10rem)] lg:w-full lg:max-w-[980px] lg:grid-cols-[280px_620px] lg:items-center lg:justify-center lg:gap-10 xl:max-w-[1060px] xl:grid-cols-[300px_660px]">
           <div className="max-w-[360px] pl-4 lg:pl-8 xl:pl-10">
             <SectionIntro
               title="Planos"
