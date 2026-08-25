@@ -63,7 +63,7 @@ export default function FloatingWhatsAppDesktop() {
 
   return (
     <Link
-      href="https://wa.me/5511932311663?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Le%20Club"
+      href="https://wa.me/5511947961496?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Le%20Club"
       target="_blank"
       rel="noreferrer"
       aria-label="Fale no WhatsApp"

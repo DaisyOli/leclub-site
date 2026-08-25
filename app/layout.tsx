@@ -56,7 +56,7 @@ const localBusinessSchema = {
   name: "Le Club Fitness & Wellness",
   url: "https://www.leclubfw.com",
   image: "https://www.leclubfw.com/fachada.jpeg",
-  telephone: "+5511932311663",
+  telephone: "+5511947961496",
   email: "contato@leclubfw.com",
   address: {
     "@type": "PostalAddress",

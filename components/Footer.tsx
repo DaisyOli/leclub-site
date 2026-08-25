@@ -16,7 +16,7 @@ const clubLinks: FooterLink[] = [
 const contactLinks: FooterLink[] = [
   {
     label: "WhatsApp",
-    href: "https://wa.me/5511932311663",
+    href: "https://wa.me/5511947961496",
     external: true,
   },
   { label: "Contato", href: "mailto:contato@leclubfw.com" },
