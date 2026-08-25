@@ -19,7 +19,7 @@ export const planBenefits = [
   },
   {
     number: "02",
-    title: "Avaliações e acompanhamento",
+    title: "Acompanhamento",
     Icon: AssessmentIcon,
     items: [
       "Avaliação física completa com coordenador técnico",
@@ -56,8 +56,9 @@ export const annualPlan = {
   description:
     "Acesso à estrutura LeCLUB com acompanhamento técnico, avaliações periódicas, recursos de recuperação e benefícios exclusivos.",
   referencePrice: "R$ 1.100",
+  referenceFee: "+ taxa de matrícula de R$ 450",
   presalePrice: "R$ 973",
-  enrollmentFee: "+ taxa de matrícula de R$ 450",
+  presaleFee: "Sem taxa de matrícula",
   condition: "Condição especial de inauguração",
   ctaLabel: "Participar da pré-venda",
   ctaHref: "/inscricao",

@@ -27,8 +27,9 @@ export default function PlanCard() {
         <div className="space-y-3.5">
           <PlanPriceBox
             referencePrice={annualPlan.referencePrice}
+            referenceFee={annualPlan.referenceFee}
             presalePrice={annualPlan.presalePrice}
-            enrollmentFee={annualPlan.enrollmentFee}
+            presaleFee={annualPlan.presaleFee}
             condition={annualPlan.condition}
           />
 

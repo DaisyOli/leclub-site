@@ -1,19 +1,105 @@
 import Container from "./Container";
 import LogoLight from "./LogoLight";
 
+type FooterLink = {
+  label: string;
+  href: string;
+  external?: boolean;
+};
+
+const clubLinks: FooterLink[] = [
+  { label: "Sobre", href: "#sobre" },
+  { label: "Local", href: "#local" },
+  { label: "Planos", href: "/loja", external: true },
+];
+
+const contactLinks: FooterLink[] = [
+  { label: "Contato", href: "mailto:contato@leclubfw.com" },
+  { label: "Faça parte da equipe", href: "mailto:recursoshumanos@leclubfw.com" },
+];
+
+// Rótulos recuam como estrutura; os links é que carregam o peso.
+const labelClass =
+  "text-[10.5px] font-medium uppercase tracking-[0.22em] text-[var(--text-light)]/45";
+
+const linkClass =
+  "w-fit text-[14px] text-[var(--text-light)]/85 transition-colors duration-200 hover:text-[var(--text-light)] md:text-[15px]";
+
 export default function Footer() {
   return (
-    <footer className="w-full bg-[var(--dark-green)] py-10 text-[var(--text-light)] md:py-12">
+    <footer className="w-full bg-[var(--coffee)] py-12 text-[var(--text-light)] md:py-14">
       <Container>
-        <FooterDesktop />
-        <FooterMobile />
+        <div className="grid gap-10 md:grid-cols-[1fr_auto_auto_auto] md:gap-12 lg:gap-20">
+          <div className="flex flex-col items-start gap-6">
+            <LogoLight />
 
-        <div className="mt-8 border-t border-white/10 pt-6 text-center text-sm opacity-80">
+            <address className="not-italic">
+              <p className="text-[14px] leading-[1.7] text-[var(--text-light)]/85">
+                Rua Pio XI, 2162
+                <br />
+                Alto de Pinheiros
+                <br />
+                São Paulo &mdash; SP
+              </p>
+
+              <a
+                href="https://maps.app.goo.gl/GENbfPhSk6Q5bNdc9"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abrir o endereço da LeCLUB no Google Maps"
+                className="mt-3 inline-block text-[13px] text-[var(--text-light)]/60 underline underline-offset-4 transition-colors duration-200 hover:text-[var(--text-light)]"
+              >
+                Ver no mapa
+              </a>
+            </address>
+          </div>
+
+          <div className="grid grid-cols-2 gap-x-6 gap-y-10 md:contents">
+            <FooterNav
+              label="Academia"
+              ariaLabel="Links institucionais"
+              links={clubLinks}
+            />
+
+            <FooterNav
+              label="Fale Conosco"
+              ariaLabel="Links de contato"
+              links={contactLinks}
+            />
+
+            <div className="col-span-2 flex flex-col gap-4 md:col-span-1">
+              <span className={labelClass}>Siga</span>
+
+              <a
+                href="https://instagram.com/leclubfw"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram da Le Club"
+                className="w-fit text-[var(--text-light)]/85 transition-colors duration-200 hover:text-[var(--text-light)]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.75"
+                  className="h-[18px] w-[18px]"
+                >
+                  <rect x="2.75" y="2.75" width="18.5" height="18.5" rx="5" />
+                  <circle cx="12" cy="12" r="4.25" />
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12 border-t border-[var(--text-light)]/10 pt-6 text-center md:mt-14">
           <a
             href="https://www.linkedin.com/in/daisy-oliani"
             target="_blank"
             rel="noreferrer"
-            className="transition-opacity hover:opacity-70"
+            className="text-[12px] text-[var(--text-light)]/45 transition-colors duration-200 hover:text-[var(--text-light)]/70"
           >
             Site desenvolvido por Daisy Oliani
           </a>
@@ -23,140 +109,32 @@ export default function Footer() {
   );
 }
 
-function FooterDesktop() {
+type FooterNavProps = {
+  label: string;
+  ariaLabel: string;
+  links: FooterLink[];
+};
+
+function FooterNav({ label, ariaLabel, links }: FooterNavProps) {
   return (
-    <div className="hidden md:grid md:grid-cols-[1.4fr_1fr_1fr_0.6fr] md:gap-10 lg:gap-16">
-      <div className="flex items-start">
-        <LogoLight />
-      </div>
+    <nav className="flex flex-col gap-4" aria-label={ariaLabel}>
+      <h3 className={labelClass}>{label}</h3>
 
-      <nav className="flex flex-col gap-3 text-[15px]" aria-label="Links institucionais">
-        <h3 className="opacity-90">Quem somos</h3>
-
-        <a href="#sobre" className="opacity-90 transition-opacity hover:opacity-70">
-          Sobre
-        </a>
-        <a href="#local" className="opacity-90 transition-opacity hover:opacity-70">
-          Local
-        </a>
-        <a
-          href="/loja"
-          className="opacity-90 transition-opacity hover:opacity-70"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Planos
-        </a>
-      </nav>
-
-      <nav className="flex flex-col gap-3 text-[15px]" aria-label="Links de contato">
-        <h3 className="opacity-90">Fale Conosco</h3>
-
-        <a href="mailto:contato@leclubfw.com" className="opacity-90 transition-opacity hover:opacity-70">
-          Contato
-        </a>
-        <a
-          href="mailto:recursoshumanos@leclubfw.com"
-          className="opacity-90 transition-opacity hover:opacity-70"
-        >
-          Faça parte da equipe
-        </a>
-      </nav>
-
-      <div className="flex flex-col gap-3">
-        <span className="text-[15px] opacity-90">Siga</span>
-
-        <a
-          href="https://instagram.com/leclubfw"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Instagram da Le Club"
-          className="w-fit text-[var(--text-light)] opacity-90 transition-opacity hover:opacity-70"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.75"
-            className="h-[18px] w-[18px]"
-          >
-            <rect x="2.75" y="2.75" width="18.5" height="18.5" rx="5" />
-            <circle cx="12" cy="12" r="4.25" />
-            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-          </svg>
-        </a>
-      </div>
-    </div>
-  );
-}
-
-function FooterMobile() {
-  return (
-    <div className="flex flex-col gap-8 md:hidden">
-      <div className="flex justify-start">
-        <LogoLight />
-      </div>
-
-      <div className="grid grid-cols-1 gap-8 text-sm">
-        <nav className="flex flex-col gap-3" aria-label="Links institucionais">
-          <h3 className="opacity-90">Quem somos</h3>
-
-          <a href="#sobre" className="opacity-90 transition-opacity hover:opacity-70">
-            Sobre
-          </a>
-          <a href="#local" className="opacity-90 transition-opacity hover:opacity-70">
-            Local
-          </a>
-          <a
-            href="/loja"
-            className="opacity-90 transition-opacity hover:opacity-70"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Planos
-          </a>
-        </nav>
-
-        <nav className="flex flex-col gap-3" aria-label="Links de contato">
-          <h3 className="opacity-90">Fale Conosco</h3>
-
-          <a href="mailto:contato@leclubfw.com" className="opacity-90 transition-opacity hover:opacity-70">
-            Contato
-          </a>
-          <a
-            href="mailto:recursoshumanos@leclubfw.com"
-            className="opacity-90 transition-opacity hover:opacity-70"
-          >
-            Faça parte da equipe
-          </a>
-        </nav>
-
-        <div className="flex flex-col gap-3">
-          <span className="text-sm opacity-90">Siga</span>
-
-          <a
-            href="https://instagram.com/leclubfw"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Instagram da Le Club"
-            className="w-fit text-[var(--text-light)] opacity-90 transition-opacity hover:opacity-70"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.75"
-              className="h-[18px] w-[18px]"
+      <ul className="flex flex-col gap-3">
+        {links.map(({ label: text, href, external }) => (
+          <li key={text}>
+            <a
+              href={href}
+              className={linkClass}
+              {...(external
+                ? { target: "_blank", rel: "noreferrer" }
+                : {})}
             >
-              <rect x="2.75" y="2.75" width="18.5" height="18.5" rx="5" />
-              <circle cx="12" cy="12" r="4.25" />
-              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
+              {text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }
