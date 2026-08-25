@@ -12,10 +12,40 @@ const manrope = Manrope({
   variable: "--font-manrope",
 });
 
+const siteName = "Le Club Fitness & Wellness";
+const tagline = "Corpo, movimento e consciência";
+
+// Na prévia de link só existe uma linha de texto, e a tagline sozinha não
+// diz o que é nem onde fica. Esta descreve; a da página segue sendo a marca.
+const shareDescription =
+  "Academia com acompanhamento clínico, avaliações periódicas e recursos de recuperação, no Alto de Pinheiros, São Paulo.";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.leclubfw.com"),
-  title: "Le Club Fitness & Wellness",
-  description: "Corpo, movimento e consciência",
+  title: siteName,
+  description: tagline,
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: "https://www.leclubfw.com",
+    siteName,
+    title: siteName,
+    description: shareDescription,
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Recepção da Le Club Fitness & Wellness",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteName,
+    description: shareDescription,
+    images: ["/og-image.jpg"],
+  },
 };
 
 // Dados estruturados para busca local. Sem horário de funcionamento nem
