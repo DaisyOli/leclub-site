@@ -14,6 +14,11 @@ const clubLinks: FooterLink[] = [
 ];
 
 const contactLinks: FooterLink[] = [
+  {
+    label: "WhatsApp",
+    href: "https://wa.me/5511932311663",
+    external: true,
+  },
   { label: "Contato", href: "mailto:contato@leclubfw.com" },
   { label: "Faça parte da equipe", href: "mailto:recursoshumanos@leclubfw.com" },
 ];
@@ -39,7 +44,7 @@ export default function Footer() {
                 <br />
                 Alto de Pinheiros
                 <br />
-                São Paulo &mdash; SP
+                05468-140 &mdash; São Paulo, SP
               </p>
 
               <a
