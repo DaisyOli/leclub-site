@@ -1,5 +1,28 @@
 import { LeafIcon, TagIcon } from "../icons/PlanIcons";
 
+// Um espaço de verdade abre 0.300em entre o "$" e o dígito (o espaço do
+// Manrope vale 0.200em, mais 0.100em das folgas dos próprios glifos), o
+// que ficou largo demais. Sem espaço, sobram só 0.100em e fica apertado.
+// Este ajuste deixa 0.160em, pouco mais da metade de um espaço.
+// Em "em" para acompanhar cada tamanho de fonte.
+function Currency({ children }: { children: string }) {
+  const parts = children.split(/(R\$)/);
+
+  return (
+    <>
+      {parts.map((part, i) =>
+        part === "R$" ? (
+          <span key={i} className="mr-[0.06em]">
+            {part}
+          </span>
+        ) : (
+          part
+        ),
+      )}
+    </>
+  );
+}
+
 type PlanPriceBoxProps = {
   referencePrice: string;
   referenceFee: string;
@@ -27,11 +50,11 @@ export default function PlanPriceBox({
             </p>
 
             <p className="mt-1 text-[17px] leading-none text-[var(--copper)] line-through">
-              {referencePrice}
+              <Currency>{referencePrice}</Currency>
             </p>
 
             <p className="mt-1.5 text-[11px] leading-[1.3] text-[var(--text-dark)]/60">
-              {referenceFee}
+              <Currency>{referenceFee}</Currency>
             </p>
           </div>
         </div>
@@ -42,7 +65,7 @@ export default function PlanPriceBox({
           </p>
 
           <p className="mt-2 text-[26px] font-semibold leading-none tracking-[0.02em] text-[var(--copper)] md:text-[24px] xl:text-[26px]">
-            {presalePrice}
+            <Currency>{presalePrice}</Currency>
           </p>
 
           <p className="mt-2 text-[11px] font-medium leading-[1.3] text-[var(--copper)]">
