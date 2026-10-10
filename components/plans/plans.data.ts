@@ -56,7 +56,7 @@ export const annualPlan = {
   eyebrow: "Pré-venda plano anual",
   description:
     "Acesso à estrutura LeCLUB com acompanhamento técnico, avaliações periódicas, recursos de recuperação e benefícios exclusivos.",
-  referencePrice: "R$1.173",
+  referencePrice: "R$1.050",
   referenceFee: "+ taxa de matrícula de R$450",
   presalePrice: "R$973",
   presaleFee: "Sem taxa de matrícula",
